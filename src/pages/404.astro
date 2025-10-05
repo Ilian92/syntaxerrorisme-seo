@@ -82,7 +82,7 @@ const description = "Page introuvable sur Syntaxerrorisme.com. Découvrez nos gu
 				<section>
 					<h2>Message Technique</h2>
 					<div style="background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-						<pre><code>HTTP/1.1 404 Not Found
+						<pre><code>{`HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=UTF-8
 Location: /error/404
 
@@ -94,7 +94,7 @@ function findPage(url) {
 // Solution recommandée :
 function redirect() {
     window.location.href = '/';
-}</code></pre>
+}`}</code></pre>
 					</div>
 				</section>
 
@@ -123,8 +123,8 @@ function redirect() {
 		
 		<script>
 			// Tracking des erreurs 404 pour analytics
-			if (typeof gtag !== 'undefined') {
-				gtag('event', 'page_not_found', {
+			if (typeof window !== 'undefined' && 'gtag' in window) {
+				(window as any).gtag('event', 'page_not_found', {
 					'page_location': window.location.href,
 					'page_title': '404 - Syntaxerrorisme'
 				});
@@ -132,9 +132,11 @@ function redirect() {
 			
 			// Auto-redirection optionnelle après 10 secondes
 			setTimeout(() => {
-				const shouldRedirect = confirm('Voulez-vous être redirigé vers l\'accueil du site Syntaxerrorisme ?');
-				if (shouldRedirect) {
-					window.location.href = '/';
+				if (typeof window !== 'undefined' && typeof window.confirm === 'function') {
+					const shouldRedirect = window.confirm('Voulez-vous être redirigé vers l\'accueil du site Syntaxerrorisme ?');
+					if (shouldRedirect) {
+						window.location.href = '/';
+					}
 				}
 			}, 10000);
 		</script>
