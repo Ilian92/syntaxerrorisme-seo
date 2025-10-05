@@ -1,63 +1,113 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+const title = "À Propos du Syntaxerrorisme - Expert en Erreurs de Syntaxe";
+const description = "Découvrez l'expertise derrière Syntaxerrorisme.com. Guide sur les erreurs de syntaxe, solutions et prévention en programmation par des experts développeurs.";
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead 
+			title={title} 
+			description={description} 
+			keywords="à propos syntaxerrorisme, expert erreurs syntaxe, guide programmation, formation développement"
+		/>
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "AboutPage",
+			"name": "À Propos du Syntaxerrorisme",
+			"description": "Expertise en syntaxerrorisme et erreurs de programmation",
+			"url": "https://syntaxerrorisme.com/about",
+			"mainEntity": {
+				"@type": "Organization",
+				"name": "Syntaxerrorisme",
+				"description": "Spécialistes de la prévention et résolution des erreurs de syntaxe",
+				"expertise": ["JavaScript", "Python", "Java", "TypeScript", "Debugging"],
+				"foundingDate": "2024"
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<header>
+					<h1>À Propos de Syntaxerrorisme : Notre Expertise Anti-Erreurs</h1>
+					<p class="lead">Bienvenue sur <strong>Syntaxerrorisme.com</strong>, la référence francophone pour comprendre, prévenir et résoudre les erreurs de syntaxe en programmation.</p>
+				</header>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+				<section>
+					<h2>Notre Mission Anti-Syntaxerrorisme</h2>
+					<p>Le <strong>syntaxerrorisme</strong> affecte millions de développeurs quotidiennement. Notre mission est de transformer cette frustration en expertise, en fournissant :</p>
+					
+					<ul>
+						<li>📚 <strong>Guides complets</strong> sur le syntaxerrorisme par langage</li>
+						<li>🛠️ <strong>Outils recommandés</strong> pour la prévention</li>
+						<li>💡 <strong>Solutions pratiques</strong> aux erreurs communes</li>
+						<li>🎯 <strong>Bonnes pratiques</strong> de développement</li>
+						<li>📈 <strong>Méthodes éprouvées</strong> d'amélioration</li>
+					</ul>
+				</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+				<section>
+					<h2>Pourquoi Syntaxerrorisme ?</h2>
+					<p>Le terme <strong>"syntaxerrorisme"</strong> capture parfaitement la nature parfois "terrorisante" des erreurs de syntaxe pour les développeurs. En transformant ce concept en expertise positive, nous aidons la communauté à :</p>
+					
+					<div class="benefits-grid">
+						<div class="benefit">
+							<h3>⚡ Gagner du Temps</h3>
+							<p>Réduction drastique du temps de debugging grâce à nos méthodes préventives</p>
+						</div>
+						<div class="benefit">
+							<h3>🎯 Améliorer la Qualité</h3>
+							<p>Code plus robuste et maintenable avec nos bonnes pratiques</p>
+						</div>
+						<div class="benefit">
+							<h3>📚 Apprendre Efficacement</h3>
+							<p>Progression rapide avec nos guides structurés et exemples concrets</p>
+						</div>
+						<div class="benefit">
+							<h3>🤝 Partager l'Expertise</h3>
+							<p>Communauté de développeurs aidant à résoudre le syntaxerrorisme</p>
+						</div>
+					</div>
+				</section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+				<section>
+					<h2>Notre Expertise Technique</h2>
+					<p>L'équipe <strong>Syntaxerrorisme</strong> possède une expérience collective de plus de 50 ans en développement logiciel, couvrant :</p>
+					
+					<h3>Langages Maîtrisés</h3>
+					<ul>
+						<li><strong>JavaScript/TypeScript</strong> - 15+ ans d'expérience</li>
+						<li><strong>Python</strong> - Expertise Django, Flask, FastAPI</li>
+						<li><strong>Java</strong> - Spring, Hibernate, Maven</li>
+						<li><strong>C#/.NET</strong> - Applications entreprise</li>
+						<li><strong>PHP</strong> - Laravel, Symfony</li>
+						<li><strong>Go, Rust, Kotlin</strong> - Langages modernes</li>
+					</ul>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+					<h3>Domaines d'Application</h3>
+					<ul>
+						<li>🌐 <strong>Développement Web</strong> - Front-end et Back-end</li>
+						<li>📱 <strong>Applications Mobile</strong> - React Native, Flutter</li>
+						<li>☁️ <strong>Cloud Computing</strong> - AWS, Azure, GCP</li>
+						<li>🔧 <strong>DevOps</strong> - CI/CD, Docker, Kubernetes</li>
+						<li>🧪 <strong>Tests</strong> - TDD, BDD, automatisation</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Contact et Collaboration</h2>
+					<p>Nous sommes toujours intéressés par les <strong>partenariats</strong> et <strong>contributions</strong> d'experts du domaine. Ensemble, faisons du <strong>syntaxerrorisme</strong> un problème du passé !</p>
+				</section>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,142 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+const title = "404 - Page Non Trouvée | Syntaxerrorisme";
+const description = "Page introuvable sur Syntaxerrorisme.com. Découvrez nos guides sur le syntaxerrorisme et les erreurs de programmation via notre navigation.";
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead 
+			title={title} 
+			description={description}
+			keywords="404, page non trouvée, syntaxerrorisme, erreurs programmation"
+		/>
+		<meta name="robots" content="noindex, follow" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<header>
+					<h1>404 - Erreur de Navigation Détectée !</h1>
+					<p class="lead">Comme une erreur de syntaxe dans votre code, cette page semble introuvable. Mais ne vous inquiétez pas, nous allons vous aider à <strong>déboguer</strong> cette situation !</p>
+				</header>
+
+				<section>
+					<h2>Diagnostic de l'Erreur</h2>
+					<p>Cette erreur 404 est similaire au <strong>syntaxerrorisme</strong> que vous pourriez rencontrer en programmation :</p>
+					
+					<div class="tool-card">
+						<h3>🔍 Analyse de l'Erreur</h3>
+						<p>La ressource demandée n'existe pas ou a été déplacée, comme une fonction appelée avec un mauvais nom.</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Solutions Anti-404</h2>
+					<p>Voici plusieurs chemins pour continuer votre exploration du <strong>syntaxerrorisme</strong> :</p>
+					
+					<div class="tools-grid">
+						<div class="tool-card">
+							<h3>🏠 Retour à l'Accueil</h3>
+							<p>Commencez par notre guide complet sur le syntaxerrorisme</p>
+							<a href="/" class="cta">Accueil Syntaxerrorisme</a>
+						</div>
+						
+						<div class="tool-card">
+							<h3>📚 Blog Technique</h3>
+							<p>Explorez nos articles sur les erreurs de programmation</p>
+							<a href="/blog" class="cta">Blog Anti-Erreurs</a>
+						</div>
+						
+						<div class="tool-card">
+							<h3>🔧 Guides Pratiques</h3>
+							<p>Découvrez nos solutions par langage de programmation</p>
+							<a href="/blog/syntaxerrorisme-javascript" class="cta">Guide JavaScript</a>
+						</div>
+						
+						<div class="tool-card">
+							<h3>🛠️ Outils Recommandés</h3>
+							<p>Les meilleurs outils pour combattre le syntaxerrorisme</p>
+							<a href="/blog/outils-anti-syntaxerrorisme" class="cta">Outils Anti-Bugs</a>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Recherche Rapide</h2>
+					<p>Peut-être cherchiez-vous des informations sur :</p>
+					
+					<ul>
+						<li><a href="/blog/syntaxerrorisme-python">Syntaxerrorisme en Python</a> - Erreurs d'indentation et solutions</li>
+						<li><a href="/blog/prevention-syntaxerrorisme">Prévention du Syntaxerrorisme</a> - Bonnes pratiques</li>
+						<li><a href="/about">À Propos de Syntaxerrorisme</a> - Notre expertise</li>
+						<li><a href="/">Guide Complet Syntaxerrorisme</a> - Page d'accueil</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Message Technique</h2>
+					<div style="background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+						<pre><code>HTTP/1.1 404 Not Found
+Content-Type: text/html; charset=UTF-8
+Location: /error/404
+
+// Erreur similaire au syntaxerrorisme :
+function findPage(url) {
+    throw new Error('Page not found: ' + url);
+}
+
+// Solution recommandée :
+function redirect() {
+    window.location.href = '/';
+}</code></pre>
+					</div>
+				</section>
+
+				<section>
+					<h2>Besoin d'Aide ?</h2>
+					<p>Si vous rencontrez régulièrement des erreurs comme celle-ci, c'est peut-être le moment de vous former au <strong>debugging</strong> et à la <strong>prévention du syntaxerrorisme</strong>.</p>
+					
+					<div class="benefits-grid">
+						<div class="benefit">
+							<h3>📧 Contact</h3>
+							<p>Signalez un lien cassé ou une erreur</p>
+						</div>
+						<div class="benefit">
+							<h3>🔄 Mise à Jour</h3>
+							<p>Nos contenus évoluent régulièrement</p>
+						</div>
+						<div class="benefit">
+							<h3>📖 Documentation</h3>
+							<p>Consultez notre sitemap complet</p>
+						</div>
+					</div>
+				</section>
+			</article>
+		</main>
+		<Footer />
+		
+		<script>
+			// Tracking des erreurs 404 pour analytics
+			if (typeof gtag !== 'undefined') {
+				gtag('event', 'page_not_found', {
+					'page_location': window.location.href,
+					'page_title': '404 - Syntaxerrorisme'
+				});
+			}
+			
+			// Auto-redirection optionnelle après 10 secondes
+			setTimeout(() => {
+				const shouldRedirect = confirm('Voulez-vous être redirigé vers l\'accueil du site Syntaxerrorisme ?');
+				if (shouldRedirect) {
+					window.location.href = '/';
+				}
+			}, 10000);
+		</script>
+	</body>
+</html>

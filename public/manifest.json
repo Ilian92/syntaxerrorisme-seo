@@ -1,0 +1,21 @@
+{
+  "name": "Syntaxerrorisme",
+  "short_name": "SyntaxError",
+  "description": "Guide complet sur le syntaxerrorisme et les erreurs de syntaxe en programmation",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "theme_color": "#e11d48",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["developer", "programming", "education", "tools"],
+  "lang": "fr",
+  "scope": "/",
+  "screenshots": []
+}

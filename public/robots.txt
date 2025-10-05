@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://syntaxerrorisme.com/sitemap-index.xml
+
+# Règles spécifiques pour améliorer le SEO
+Crawl-delay: 1
+
+# Empêcher l'indexation des fichiers non pertinents
+Disallow: /*.json
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_astro/
+
+# Permettre l'indexation de tout le contenu syntaxerrorisme
+Allow: /blog/
+Allow: /about
+Allow: /
