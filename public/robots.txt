@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://syntaxerrorisme.com/sitemap-index.xml
+Sitemap: https://syntaxerrorisme.ilianigoudjil.me/sitemap-index.xml
 
 # Règles spécifiques pour améliorer le SEO
 Crawl-delay: 1

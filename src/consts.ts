@@ -8,4 +8,4 @@ export const SITE_DESCRIPTION =
 export const SITE_KEYWORDS =
   "syntaxerrorisme, erreurs de syntaxe, programmation, debug, développement, code, erreurs programmation";
 export const SITE_AUTHOR = "Expert Syntaxerrorisme";
-export const SITE_URL = "https://syntaxerrorisme.com";
+export const SITE_URL = "https://syntaxerrorisme.ilianigoudjil.me";
