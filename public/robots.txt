@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://syntaxerrorisme.vercel.app//sitemap-index.xml
+Sitemap: https://syntaxerrorisme.vercel.app/sitemap-index.xml
 
 # Empêcher l'indexation des fichiers non pertinents
 Disallow: /*.json

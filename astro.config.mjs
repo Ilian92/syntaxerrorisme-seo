@@ -6,7 +6,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://syntaxerrorisme.ilianigoudjil.me",
+  site: "https://syntaxerrorisme.vercel.app",
   integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: {

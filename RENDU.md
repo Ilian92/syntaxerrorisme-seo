@@ -1,7 +1,7 @@
 # Rapport d'Optimisation SEO - Syntaxerrorisme
 
 **Date**: 5 février 2026  
-**Site**: https://syntaxerrorisme.ilianigoudjil.me  
+**Site**: https://syntaxerrorisme.vercel.app  
 **Framework**: Astro 5.14.1
 
 ---
@@ -18,7 +18,7 @@ Ce rapport détaille les optimisations SEO implémentées sur le site statique S
 
 - **Framework**: Astro 5.14.1 - Framework idéal pour le SEO (génération de sites statiques)
 - **Minification Vite**: Activée pour optimiser la taille des assets
-- **URL de site configurée**: `https://syntaxerrorisme.ilianigoudjil.me` (essentiel pour les sitemaps et canonical URLs)
+- **URL de site configurée**: `https://syntaxerrorisme.vercel.app` (essentiel pour les sitemaps et canonical URLs)
 
 ### 2. Sitemap XML
 
@@ -37,7 +37,7 @@ Ce rapport détaille les optimisations SEO implémentées sur le site statique S
 - **Localisation**: `/public/robots.txt`
 - **Configuration**:
   - `Allow: /` - Indexation générale autorisée
-  - Référence du sitemap: `Sitemap: https://syntaxerrorisme.ilianigoudjil.me/sitemap-index.xml`
+  - Référence du sitemap: `Sitemap: https://syntaxerrorisme.vercel.app/sitemap-index.xml`
   - Blocage des fichiers JSON inutiles: `Disallow: /*.json`
   - **Exception**: `Allow: /manifest.json` (règle spécifique pour éviter le blocage du manifest PWA)
   - Blocage des fichiers source maps: `Disallow: /_astro/*.map`
@@ -160,7 +160,7 @@ SITE_TITLE: "Syntaxerrorisme - Le Guide Complet des Erreurs de Syntaxe"
 SITE_DESCRIPTION: "Découvrez tout sur le syntaxerrorisme : causes, solutions et prévention des erreurs de syntaxe en programmation. Guide complet pour développeurs débutants et expérimentés."
 SITE_KEYWORDS: "syntaxerrorisme, erreurs de syntaxe, programmation, debug, développement, code, erreurs programmation"
 SITE_AUTHOR: "Expert Syntaxerrorisme"
-SITE_URL: "https://syntaxerrorisme.ilianigoudjil.me"
+SITE_URL: "https://syntaxerrorisme.vercel.app"
 ```
 
 ---
@@ -177,7 +177,7 @@ SITE_URL: "https://syntaxerrorisme.ilianigoudjil.me"
   "@type": "WebSite",
   "name": "Syntaxerrorisme",
   "description": "Guide complet sur le syntaxerrorisme et les erreurs de syntaxe en programmation",
-  "url": "https://syntaxerrorisme.ilianigoudjil.me",
+  "url": "https://syntaxerrorisme.vercel.app",
   "inLanguage": "fr-FR",
   "author": { "name": "Expert Syntaxerrorisme" },
   "sameAs": ["https://github.com/syntaxerrorisme"]
