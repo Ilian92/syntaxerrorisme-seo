@@ -2,6 +2,8 @@
 title: "Syntaxerrorisme en Python : Éviter les Pièges et Maîtriser les Erreurs"
 description: "Guide complet sur le syntaxerrorisme en Python. Découvrez les erreurs communes, solutions et bonnes pratiques pour un code Python impeccable."
 pubDate: "Oct 05 2024"
+updatedDate: "Feb 05 2026"
+heroImage: "/og-default.svg"
 keywords: "syntaxerrorisme python, erreurs indentation python, syntaxerror python, debug python"
 ---
 

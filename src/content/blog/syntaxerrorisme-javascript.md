@@ -2,6 +2,8 @@
 title: "Syntaxerrorisme en JavaScript : Guide Complet pour Éviter les Erreurs"
 description: "Découvrez les principales erreurs de syntaxerrorisme en JavaScript et apprenez à les éviter. Guide détaillé avec exemples pratiques et solutions."
 pubDate: "Oct 05 2024"
+updatedDate: "Feb 05 2026"
+heroImage: "/og-default.svg"
 keywords: "syntaxerrorisme javascript, erreurs syntaxe js, debug javascript, erreurs javascript"
 ---
 

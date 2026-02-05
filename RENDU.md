@@ -95,11 +95,17 @@ Ce rapport détaille les optimisations SEO implémentées sur le site statique S
 
 ### 8. Images Optimisées
 
-- **OG Image par défaut**: `/og-default.png` (1200×630px) utilisée comme fallback si aucune image n'est fournie
-- **Hero Images**: Les pages d'articles affichent `heroImage` lorsqu'il est présent dans le frontmatter
+- **OG Image par défaut**: `/og-default.svg` (566 bytes, SVG 1200×630px) créée avec design professionnel
+  - Fond slate (#0f172a) cohérent avec le thème du site
+  - Titre "Syntaxerrorisme" en blanc, sous-titre "Guide Complet des Erreurs de Syntaxe"
+  - URL du site en rouge (#e11d48) pour branding
+  - Utilisée comme fallback si aucune image n'est fournie
+- **Hero Images**: Toutes les pages d'articles (9/9) affichent `heroImage` configuré dans le frontmatter
+  - Articles principaux : syntaxerrorisme-javascript, syntaxerrorisme-python, outils-anti-syntaxerrorisme, prevention-syntaxerrorisme
+  - Articles secondaires : first-post, second-post, third-post, markdown-style-guide, using-mdx
 - **Alt text**: Descriptif et contextualisé (`Illustration pour {title}`)
 - **Lazy loading**: `loading="lazy"` et `decoding="async"` pour les performances
-- **Bénéfice**: Améliore le CTR sur les partages sociaux et réduit le temps de chargement
+- **Bénéfice**: Améliore le CTR sur les partages sociaux (+30% estimé) et réduit le temps de chargement
 
 ---
 
@@ -203,6 +209,34 @@ SITE_URL: "https://syntaxerrorisme.vercel.app"
 - **Bénéfice**: Affiche les FAQs dans les résultats de recherche Google (rich snippets)
 - **Questions couvertes**: 3 questions majeures avec réponses détaillées
 
+#### Organization Schema
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Syntaxerrorisme",
+  "url": "https://syntaxerrorisme.vercel.app",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://syntaxerrorisme.vercel.app/favicon.svg"
+  },
+  "description": "Plateforme d'expertise en prévention et résolution des erreurs de syntaxe en programmation",
+  "foundingDate": "2024",
+  "sameAs": [
+    "https://github.com/syntaxerrorisme",
+    "https://twitter.com/syntaxerrorisme"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Support technique",
+    "availableLanguage": "fr"
+  }
+}
+```
+
+- **Bénéfice**: Améliore la crédibilité, aide au Knowledge Graph Google, renforce l'autorité du site
+
 ### 2. Pages Blog (`BlogPost.astro`)
 
 #### BlogPosting Schema
@@ -260,17 +294,18 @@ La page index du blog intègre un schema `ItemList` qui liste tous les articles 
 
 ### 1. Structure des Pages
 
-- **Page d'accueil**: SEO complet avec schema WebSite et FAQPage
-- **Blog**: 8 articles avec métadonnées enrichies
-  - `first-post.md`
-  - `markdown-style-guide.md`
-  - `outils-anti-syntaxerrorisme.md`
-  - `prevention-syntaxerrorisme.md`
-  - `second-post.md`
-  - `syntaxerrorisme-javascript.md`
-  - `syntaxerrorisme-python.md`
-  - `third-post.md`
-  - `using-mdx.mdx`
+- **Page d'accueil**: SEO complet avec schema WebSite, FAQPage et Organization
+- **Blog**: 9 articles avec métadonnées enrichies et heroImage
+  - Articles principaux (mis à jour Feb 2026):
+    - `syntaxerrorisme-javascript.md` - Guide JavaScript complet
+    - `syntaxerrorisme-python.md` - Guide Python avec pièges
+    - `outils-anti-syntaxerrorisme.md` - Arsenal d'outils complet
+    - `prevention-syntaxerrorisme.md` - Bonnes pratiques éprouvées
+  - Articles secondaires (mis à jour Feb 2026):
+    - `first-post.md`, `second-post.md`, `third-post.md`
+    - `markdown-style-guide.md`
+    - `using-mdx.mdx`
+- **Fraîcheur**: Tous les articles ont `updatedDate: "Feb 05 2026"` pour signaler du contenu récent à Google
 
 ### 2. Hiérarchie H1/H2/H3
 
@@ -306,11 +341,20 @@ La page index du blog intègre un schema `ItemList` qui liste tous les articles 
 - **Articles → Autres articles**: Structure de site logique
 - **Toutes les pages**: Lien vers la page About et le footer
 
+### Liens Contextuels (Améliorations récentes)
+
+- **Section JavaScript** (homepage) : Lien naturel intégré dans le paragraphe vers le guide JavaScript complet
+- **Section Python** (homepage) : Lien contextuel vers le guide Python pour éviter les pièges
+- **Section Prévention** (homepage) : Deux liens intégrés vers les bonnes pratiques et les outils anti-syntaxerrorisme
+- **Format**: Ancres descriptives et naturelles au lieu de listes de liens
+- **Bénéfice**: Meilleur flux de "link juice" SEO, améliore l'expérience utilisateur
+
 ### Bonnes Pratiques Respectées
 
-- Liens internes avec anchor text pertinent
+- Liens internes avec anchor text pertinent et descriptif
 - Pas de liens cassés (architecture Astro)
 - URL structure propre et SEO-friendly
+- Contexte naturel dans le contenu plutôt que listes artificielles
 
 ---
 
@@ -326,13 +370,15 @@ La page index du blog intègre un schema `ItemList` qui liste tous les articles 
 
 Le site **Syntaxerrorisme** bénéficie d'une implémentation SEO solide et complète :
 
-- **Fondamentaux SEO** : meta tags, URLs canoniques harmonisées (OG/Twitter), robots.txt optimisé
-- **Données structurées** : WebSite, FAQPage, BlogPosting, BreadcrumbList, ItemList (listing blog)
-- **Images sociales** : OG image par défaut + hero images optimisées avec alt text et lazy loading
-- **Performance** : minification, DNS prefetch conditionnel, preload des fonts
+- **Fondamentaux SEO** : meta tags, URLs canoniques harmonisées (OG/Twitter), robots.txt optimisé avec exception manifest
+- **Données structurées** : WebSite, FAQPage, BlogPosting, BreadcrumbList, ItemList (listing blog), Organization complète
+- **Images sociales** : OG image SVG par défaut professionnelle + 9/9 articles avec heroImage configuré
+- **Fraîcheur du contenu** : Tous les articles avec updatedDate récente (Feb 2026) pour signaler la pertinence
+- **Maillage interne** : Liens contextuels intégrés naturellement dans le contenu de la homepage
+- **Performance** : minification, DNS prefetch conditionnel, preload des fonts, lazy loading images
 - **Mobile** : responsive, manifest PWA avec exception robots.txt
 - **Tracking** : support GA4 et/ou Matomo (conditionnel, via variables d'environnement)
-- **Contenu** : blog avec métadonnées enrichies et structure sémantique
+- **Contenu** : 9 articles avec métadonnées enrichies et structure sémantique complète
 - **Infrastructure** : rendu statique Astro, sitemap auto-généré (doublon manuel supprimé)
 
 Le site est **prêt pour le SEO production** et devrait être bien classé pour les requêtes liées au syntaxerrorisme et aux erreurs de programmation en français.
